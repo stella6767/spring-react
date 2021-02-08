@@ -24,6 +24,7 @@ const SaveForm = (props) => {
       body: JSON.stringify(book),
     })
       .then((res) => {
+        //res는 예약어가 아님.
         console.log(1, res);
         if (res.status === 201) {
           return res.json();
@@ -32,6 +33,7 @@ const SaveForm = (props) => {
         }
       })
       .then((res) => {
+        //catch는 여기서 오류가 나야 실행됨
         if (res !== null) {
           props.history.push('/');
         } else {
