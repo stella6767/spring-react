@@ -12,9 +12,8 @@ import LoginForm from './pages/user/LoginForm';
 function App() {
   return (
     <div>
-      <Header />
+      <Route path="/" exact={true} component={Home} />
       <Container>
-        <Route path="/" exact={true} component={Home} />
         <Route path="/saveForm" exact={true} component={SaveForm} />
         <Route path="/book/:id" exact={true} component={Detail} />
         <Route path="/loginForm" exact={true} component={LoginForm} />
